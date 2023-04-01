@@ -10,11 +10,11 @@ BUILD = "03252023a"
 
 # Check if a file name is given as an argument
 if len(sys.argv) < 2:
-    print("-------  the VIJ editor  -------")
-    print("| error: no input.             |")
-    print("| try:                         |")
-    print("| python3 vij.py [filename]    |")
-    print("--------------------------------")
+    print("-------------------------- vij --------------------------")
+    print("|  error: no input.                                     |")
+    print("|  try:                                                 |")
+    print("|  python3 vij.py [filename]                            |")
+    print("---------------------------------------------------------")
     sys.exit(1)
 
 # Open the file in read-write mode, or create a new file if it does not exist
@@ -29,23 +29,23 @@ lines = file.readlines()
 
 # Print the file content and the current line number
 def print_file():
-    print("------------- vij ----------------")
+    print("-------------------------- vij --------------------------")
     print(f"Editing {filename}")
     for i, line in enumerate(lines):
         print(f"{i+1}: {line}", end="")
 
 # Prompt the user for a command
 def prompt():
-    print("\nvij Commands:")
-    print("a  - append a new line at the end")
-    print("i# - insert a new line before ")
-    print("d#  - delete a given line number")
-    print("r#  - replace a given line number with a new line")
-    print("s[q]  - save the file, q and quit")
-    print("h  - about the vij editor")
-    print("q  - quit without saving")
-    print(" # - optional line number. [q] - optional paramter")
-    print("------------/ vij /---------------")
+    print("|-------------------- vij Commands ---------------------")
+    print("|  a  - append a new line at the end                     |")
+    print("|  i# - insert a new line before                         |")
+    print("|  d#  - delete a given line number                      |")
+    print("|  r#  - replace a given line number with a new line     |")
+    print("|  s[q]  - save the file, q and quit                     |")
+    print("|  h  - about the vij editor                             |")
+    print("|  q  - quit without saving                              |")
+    print("|  # - optional line number. [q] - optional paramter     |")
+    print("--------------------------/ vij /-------------------------")
     return input("\nEnter a command: ")
 
 # Loop until the user quits or saves
