@@ -5,8 +5,8 @@ import sys
 import re
 
 #Globals
-VERSION = "1.0.1a"
-BUILD = "03252023a"
+VERSION = "1.1.0a"
+BUILD = "04012023a"
 
 # Check if a file name is given as an argument
 if len(sys.argv) < 2:
