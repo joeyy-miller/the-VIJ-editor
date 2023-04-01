@@ -1,1 +1,26 @@
 This is a test file written with vij.
+This is the second line.
+This is the third line.
+This is some C code:
+void editorOpen(char *filename) {
+  free(E.filename);
+  E.filename = strdup(filename);
+
+  editorSelectSyntaxHighlight();
+
+  FILE *fp = fopen(filename, "r");
+  if (!fp) die("fopen");
+
+  char *line = NULL;
+  size_t linecap = 0;
+  ssize_t linelen;
+  while ((linelen = getline(&line, &linecap, fp)) != -1) {
+    while (linelen > 0 && (line[linelen - 1] == '\n' ||
+                           line[linelen - 1] == '\r'))
+      linelen--;
+    editorInsertRow(E.numrows, line, linelen);
+  }
+  free(line);
+  fclose(fp);
+  E.dirty = 0;
+}
