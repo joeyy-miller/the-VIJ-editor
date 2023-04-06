@@ -61,7 +61,7 @@ while True:
         # Append a new line at the end
         new_line = input("Enter a new line: ")
         lines.append(new_line + "\n")
-    
+
     elif command == "i":
         # Insert a new line before a given line number
         try:
@@ -73,6 +73,7 @@ while True:
                 print("Invalid line number.")
         except ValueError:
             print("Invalid line number.")
+
     elif re.match("i+[0-9][0-9]?", command):
         # Insert a new line before a given line number
         try:
@@ -84,6 +85,7 @@ while True:
                 print("Invalid line number.")
         except ValueError:
             print("Invalid line number.")
+
     elif command == "d":
         # Delete a given line number
         try:
@@ -119,6 +121,7 @@ while True:
         except ValueError:
             print("Invalid line number.")
     elif re.match("r+[0-9][0-9]?", command):
+        # Replace a specified line with a new line
         try:
             line_num = int(command[1:])
             if 1 <= line_num <= len(lines):
@@ -145,7 +148,7 @@ while True:
         new_line = input("| Press any button to continue|")
     
     elif command == "s":
-        # Save the file and exit
+        # Save the file
         file.seek(0)
         file.writelines(lines)
         file.truncate()
