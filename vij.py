@@ -13,7 +13,7 @@ if len(sys.argv) < 2:
     print("-------------------------- vij --------------------------")
     print("|  error: no input.                                     |")
     print("|  try:                                                 |")
-    print("|  python3 vij.py [filename]                            |")
+    print("|  python3 vij.py [filename]                             |")
     print("---------------------------------------------------------")
     sys.exit(1)
 
