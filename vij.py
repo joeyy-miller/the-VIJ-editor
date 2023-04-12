@@ -4,7 +4,7 @@
 import sys
 import re
 
-#Globals
+# Globals
 VERSION = "1.1.0a"
 BUILD = "040520203b"
 
@@ -52,7 +52,7 @@ def prompt():
 while True:
     # Print the file content and the current line number
     print_file()
-    
+
     # Get the user command
     command = prompt()
     
@@ -120,6 +120,7 @@ while True:
                 print("Invalid line number.")
         except ValueError:
             print("Invalid line number.")
+    
     elif re.match("r+[0-9][0-9]?", command):
         # Replace a specified line with a new line
         try:
