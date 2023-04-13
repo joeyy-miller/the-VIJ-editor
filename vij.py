@@ -11,9 +11,11 @@ BUILD = "040520203b"
 # Check if a file name is given as an argument
 if len(sys.argv) < 2:
     print("-------------------------- vij --------------------------")
+    print("|                                                       |")
     print("|  error: no input.                                     |")
     print("|  try:                                                 |")
     print("|  python3 vij.py [filename]                             |")
+    print("|                                                       |")
     print("---------------------------------------------------------")
     sys.exit(1)
 
@@ -62,6 +64,18 @@ while True:
         new_line = input("Enter a new line: ")
         lines.append(new_line + "\n")
 
+    elif command == "c":
+        # Copy the line
+        try:
+            line_num = int(input("Enter a line number to copy: "))
+            replace = int(input("Enter the line to insert it after"))
+            if 1 <= line_num <= len(lines):
+                lines.insert(line_num - 1, replace + "\n")
+            else:
+                print("Invalid line number.")
+        except ValueError:
+            print("Invalid line number.")
+    
     elif command == "i":
         # Insert a new line before a given line number
         try:
