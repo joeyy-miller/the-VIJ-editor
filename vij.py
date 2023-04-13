@@ -48,7 +48,7 @@ def prompt():
     print("|  q  - quit without saving                              |")
     print("|  # - optional line number. [q] - optional paramter     |")
     print("--------------------------/ vij /-------------------------")
-    return input("\nEnter a command: ")
+    return input("Enter a command: ")
 
 # Loop until the user quits or saves
 while True:
