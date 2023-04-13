@@ -68,7 +68,7 @@ while True:
         # Copy the line
         try:
             line_num = int(input("Enter a line number to copy: "))
-            replace = int(input("Enter the line to insert it after"))
+            replace = int(input("Enter the line to insert it after: "))
             if 1 <= line_num <= len(lines):
                 lines.insert(line_num - 1, replace + "\n")
             else:
