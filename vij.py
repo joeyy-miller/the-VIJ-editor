@@ -70,7 +70,7 @@ while True:
             line_num = int(input("Enter a line number to copy: "))
             replace = int(input("Enter the line to insert it after: "))
             if 1 <= line_num <= len(lines):
-                lines.insert(line_num - 1, replace + "\n")
+                lines.insert(replace, lines[line_num - 1])
             else:
                 print("Invalid line number.")
         except ValueError:
